@@ -21,10 +21,10 @@ app.use(petRouter)
 app.use('/form', AdoptFormRoute)
 app.use('/admin', AdminRoute)
 
-mongoose.connect(process.env.mongooseURL)
+mongoose.connect(process.env.MONGO_URL)
     .then(() => {
         console.log('Connected to DB');
-        const PORT = 4000;
+        const PORT = process.env.PORT || 4000;
         app.listen(PORT, () => {
             console.log(`Listening on port ${PORT}`)
         })

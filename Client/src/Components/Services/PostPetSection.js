@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import postPet from "./images/postPet.png";
+// import postPet from "./images/postPet.png";
+import petgroup from "./images/petgroup.png";
 
 const PostPetSection = () => {
   const [name, setName] = useState("");
@@ -114,7 +115,7 @@ const PostPetSection = () => {
   return (
     <section className="post-pet-section">
       <h2>Post a Pet for Adoption</h2>
-      <img src={postPet} alt="Pet Looking for a Home" />
+      <img src={petgroup} alt="Pet Looking for a Home" />
 
       <form onSubmit={handleSubmit} encType="multipart/form-data">
         <div className="input-box">
@@ -160,7 +161,7 @@ const PostPetSection = () => {
         </div>
 
         <div className="filter-selection-service">
-          <label>Type:</label>
+          <label>Type: </label>
           <select
             value={type}
             onChange={(event) => setType(event.target.value)}
